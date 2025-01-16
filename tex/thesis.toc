@@ -1,0 +1,100 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Preliminaries}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Reinforcement Learning}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Deep RL}{10}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Sample-efficient RL}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Benchmarks for data-efficient RL}{10}{subsection.2.2.1}%
+\contentsline {paragraph}{Atari-100k}{10}{section*.2}%
+\contentsline {paragraph}{DMC}{10}{section*.3}%
+\contentsline {section}{\numberline {2.3}Model-based RL}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Learning the model}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Using the model}{11}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Data augmentation in RL}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Self-supervised RL}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Training recipes for data-efficient RL}{13}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Integrated architectures}{13}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Open-source library implementation}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Design of the framework and the empirical studies}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}World model}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}RL algorithms}{16}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Training recipes}{17}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Data augmentation}{17}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Self-supervised RL}{17}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Implementation}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Configuration}{18}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Environments}{19}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}World model and RL modules}{22}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Data loaders and model-free mode}{23}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Training recipes}{24}{subsection.3.2.5}%
+\contentsline {chapter}{\numberline {4}Experiments}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Experimental setup}{27}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Evaluation protocols in Atari-100k benchmark}{29}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Training recipe optimization}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Simple speedup test}{29}{subsection.4.2.1}%
+\contentsline {paragraph}{Setup}{30}{section*.7}%
+\contentsline {paragraph}{Results}{30}{section*.8}%
+\contentsline {paragraph}{Conclusions}{30}{section*.9}%
+\contentsline {subsection}{\numberline {4.2.2}Decoupling model and RL optimization}{30}{subsection.4.2.2}%
+\contentsline {paragraph}{Setup}{30}{section*.11}%
+\contentsline {paragraph}{Results}{31}{section*.12}%
+\contentsline {paragraph}{Conclusions}{31}{section*.13}%
+\contentsline {section}{\numberline {4.3}Investigating the learning dynamics of the agents}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Analyzing the world model}{31}{subsection.4.3.1}%
+\contentsline {subsubsection}{Model validation loss}{31}{section*.15}%
+\contentsline {paragraph}{Results}{31}{section*.16}%
+\contentsline {paragraph}{Conclusions}{32}{section*.17}%
+\contentsline {subsubsection}{Model training loss}{32}{section*.19}%
+\contentsline {paragraph}{Conclusions}{32}{section*.20}%
+\contentsline {section}{\numberline {4.4}Auto-tuning update frequencies}{32}{section.4.4}%
+\contentsline {paragraph}{Setup}{34}{section*.22}%
+\contentsline {paragraph}{Results}{34}{section*.23}%
+\contentsline {paragraph}{Conclusions}{36}{section*.27}%
+\contentsline {subsection}{\numberline {4.4.1}Decoupled adaptive ratio system}{36}{subsection.4.4.1}%
+\contentsline {paragraph}{Results}{36}{section*.28}%
+\contentsline {paragraph}{Conclusions}{36}{section*.29}%
+\contentsline {section}{\numberline {4.5}Data augmentation}{37}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Random shifts test}{37}{subsection.4.5.1}%
+\contentsline {paragraph}{Setup}{37}{section*.31}%
+\contentsline {paragraph}{Results}{37}{section*.32}%
+\contentsline {paragraph}{Conclusions}{37}{section*.36}%
+\contentsline {subsection}{\numberline {4.5.2}Different image augmentation types}{37}{subsection.4.5.2}%
+\contentsline {paragraph}{Setup}{37}{section*.37}%
+\contentsline {paragraph}{Results}{39}{section*.38}%
+\contentsline {section}{\numberline {4.6}Choice of the RL algorithm choice}{41}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Algorithmic details}{41}{subsection.4.6.1}%
+\contentsline {subsubsection}{Soft Actor-Critic}{41}{section*.40}%
+\contentsline {subsubsection}{Proximal Policy Optimization}{41}{section*.41}%
+\contentsline {subsubsection}{Advantage Actor-Critic}{42}{section*.42}%
+\contentsline {subsubsection}{Cross-Entropy Method}{42}{section*.43}%
+\contentsline {subsection}{\numberline {4.6.2}PPO Experiments}{42}{subsection.4.6.2}%
+\contentsline {paragraph}{Setup}{42}{section*.44}%
+\contentsline {paragraph}{Results}{42}{section*.45}%
+\contentsline {paragraph}{Conclusions}{43}{section*.46}%
+\contentsline {subsection}{\numberline {4.6.3}SAC Experiments}{43}{subsection.4.6.3}%
+\contentsline {subsubsection}{Random search over the $\alpha $ coefficient}{43}{section*.49}%
+\contentsline {paragraph}{Setup}{43}{section*.50}%
+\contentsline {paragraph}{Results}{44}{section*.51}%
+\contentsline {paragraph}{Conclusions}{44}{section*.52}%
+\contentsline {subsubsection}{Auto-tuning $\alpha $ coefficient}{44}{section*.55}%
+\contentsline {paragraph}{Setup}{44}{section*.56}%
+\contentsline {paragraph}{Results}{46}{section*.58}%
+\contentsline {subsection}{\numberline {4.6.4}CEM Experiments}{46}{subsection.4.6.4}%
+\contentsline {paragraph}{Setup}{46}{section*.60}%
+\contentsline {paragraph}{Results}{46}{section*.61}%
+\contentsline {section}{\numberline {4.7}Plasticity analysis}{46}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Plasticity loss check}{48}{subsection.4.7.1}%
+\contentsline {paragraph}{Setup}{48}{section*.63}%
+\contentsline {paragraph}{Results}{48}{section*.64}%
+\contentsline {paragraph}{Conclusions}{48}{section*.65}%
+\contentsline {subsection}{\numberline {4.7.2}Metrics related to plasticity loss}{48}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}A comment on the possible interventions}{49}{subsection.4.7.3}%
+\contentsline {section}{\numberline {4.8}Combining the improvements}{49}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Hyperparameter selection}{51}{subsection.4.8.1}%
+\contentsline {paragraph}{Setup}{51}{section*.68}%
+\contentsline {paragraph}{Results}{51}{section*.69}%
+\contentsline {subsection}{\numberline {4.8.2}Atari-100k benchmark}{53}{subsection.4.8.2}%
+\contentsline {paragraph}{Setup}{53}{section*.73}%
+\contentsline {paragraph}{Results}{53}{section*.74}%
+\contentsline {chapter}{\numberline {5}Discussion}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Acknowledgements}{58}{section.5.1}%

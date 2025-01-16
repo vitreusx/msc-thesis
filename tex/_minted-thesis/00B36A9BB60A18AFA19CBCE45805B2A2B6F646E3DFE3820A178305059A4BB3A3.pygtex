@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+    \PYG{k}{class} \PYG{n+nc}{VecAgent}\PYG{p}{:}
+        \PYG{k}{def} \PYG{n+nf}{reset}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{indices}\PYG{p}{,} \PYG{n}{observations}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Receive first observations of the new episodes in the}
+\PYG{l+s+sd}{            environments specified by the indices.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+        \PYG{k}{def} \PYG{n+nf}{policy}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{indices}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Choose actions to perform in given environments, as specified by}
+\PYG{l+s+sd}{            the indices.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+        \PYG{k}{def} \PYG{n+nf}{step}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{indices}\PYG{p}{,} \PYG{n}{actions}\PYG{p}{,} \PYG{n}{observations}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Observe new observations and actions leading to them in the}
+\PYG{l+s+sd}{            environments specified by the indices.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+    \PYG{k}{class} \PYG{n+nc}{SDK}\PYG{p}{:}
+        \PYG{n}{obs\PYGZus{}space}\PYG{p}{:} \PYG{n}{Any}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Observation space, in tensor format.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+        \PYG{n}{act\PYGZus{}space}\PYG{p}{:} \PYG{n}{Any}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Action space, in tensor format.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+        \PYG{k}{def} \PYG{n+nf}{make\PYGZus{}envs}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{num\PYGZus{}envs}\PYG{p}{:} \PYG{n+nb}{int}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kwargs}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Create a number of environments. The implementation can be}
+\PYG{l+s+sd}{            optimized, e.g. by vectorizing the environments.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+        \PYG{k}{def} \PYG{n+nf}{wrap\PYGZus{}buffer}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{buffer}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Adapt a regular replay buffer into an SDK\PYGZhy{}aware version.}
+\PYG{l+s+sd}{            When adding data obtained from the environment, it is converted to}
+\PYG{l+s+sd}{            the buffer format. When sampling the data, the samples are converted}
+\PYG{l+s+sd}{            to the tensor format.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+        \PYG{k}{def} \PYG{n+nf}{rollout}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{envs}\PYG{p}{,} \PYG{n}{agent}\PYG{p}{:} \PYG{n}{VecAgent}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Create a stream of interactions of an agent with the environment(s).}
+\PYG{l+s+sd}{            The agent receives data in the tensor format, and should output actions}
+\PYG{l+s+sd}{            in the tensor format as well.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\end{Verbatim}

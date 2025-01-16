@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\PYG{+w}{    }\PYG{n+nt}{stages}\PYG{p}{:}
+\PYG{+w}{      }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{prefill}\PYG{p}{:}
+\PYG{+w}{          }\PYG{n+nt}{until}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{20e3}
+\PYG{+w}{      }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{train\PYGZus{}loop}\PYG{p}{:}
+\PYG{+w}{          }\PYG{n+nt}{until}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{400e3}
+\PYG{+w}{          }\PYG{n+nt}{tasks}\PYG{p}{:}
+\PYG{+w}{            }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{do\PYGZus{}val\PYGZus{}epoch}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZti{}}
+\PYG{+w}{              }\PYG{n+nt}{every}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{20e3}
+\PYG{+w}{            }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{do\PYGZus{}wm\PYGZus{}val\PYGZus{}step}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZti{}}
+\PYG{+w}{              }\PYG{n+nt}{every}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZob{}}\PYG{n+nt}{ n}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{16}\PYG{p+pIndicator}{,}\PYG{n+nt}{ of}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{wm\PYGZus{}opt\PYGZus{}step}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{do\PYGZus{}rl\PYGZus{}val\PYGZus{}step}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZti{}}
+\PYG{+w}{              }\PYG{n+nt}{every}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZob{}}\PYG{n+nt}{ n}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{16}\PYG{p+pIndicator}{,}\PYG{n+nt}{ of}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{rl\PYGZus{}opt\PYGZus{}step}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{do\PYGZus{}wm\PYGZus{}opt\PYGZus{}step}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZti{}}
+\PYG{+w}{              }\PYG{n+nt}{every}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{8}
+\PYG{+w}{            }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{do\PYGZus{}rl\PYGZus{}opt\PYGZus{}step}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZti{}}
+\PYG{+w}{              }\PYG{n+nt}{every}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{4}
+\PYG{+w}{            }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{do\PYGZus{}env\PYGZus{}step}
+\PYG{+w}{      }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{do\PYGZus{}val\PYGZus{}epoch}
+\PYG{+w}{      }\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nt}{save\PYGZus{}ckpt}\PYG{p}{:}
+\PYG{+w}{          }\PYG{n+nt}{full}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{false}
+\PYG{+w}{          }\PYG{n+nt}{tag}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{final}
+\end{Verbatim}

@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{\PYGZhy{}\PYGZhy{}\PYGZhy{} dreamerx/config.yml}
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{(...)}
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{data}\PYG{p+pIndicator}{:}
+\PYG{+w}{    }\PYG{n+nt}{capacity}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{2e6}
+\PYG{+w}{    }\PYG{n+nt}{val\PYGZus{}frac}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{0.0}
+\PYG{+w}{    }\PYG{n+nt}{loaders}\PYG{p}{:}
+\PYG{+w}{      }\PYG{n+nt}{dreamer\PYGZus{}wm}\PYG{p}{:}
+\PYG{+w}{        }\PYG{n+nt}{batch\PYGZus{}size}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{16}
+\PYG{+w}{        }\PYG{n+nt}{slice\PYGZus{}len}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{50}
+\PYG{+w}{        }\PYG{n+nt}{subseq\PYGZus{}len}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{[}\PYG{n+nv}{50}\PYG{p+pIndicator}{,}\PYG{+w}{ }\PYG{n+nv}{50}\PYG{p+pIndicator}{]}
+\PYG{+w}{        }\PYG{n+nt}{prioritize\PYGZus{}ends}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{true}
+\PYG{+w}{        }\PYG{n+nt}{ongoing}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{false}
+\PYG{+w}{        }\PYG{n+nt}{augment}\PYG{p}{:}
+\PYG{+w}{          }\PYG{n+nt}{type}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{none}
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{(...)}
+
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{\PYGZhy{}\PYGZhy{} thesis/exp/presets.yml}
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{(...)}
+\PYG{+w}{  }\PYG{n+nt}{thesis.data\PYGZus{}aug}\PYG{p}{:}
+\PYG{+w}{    }\PYG{n+nt}{v1}\PYG{p}{:}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZdl{}extends}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{[}\PYG{n+nv}{adaptive\PYGZus{}ratio.wm\PYGZus{}v1}\PYG{p+pIndicator}{]}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZus{}rl\PYGZus{}ratio}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{4.0}
+\PYG{+w}{      }\PYG{n+nt}{data.loaders.dreamer\PYGZus{}wm}\PYG{p}{:}
+\PYG{+w}{        }\PYG{n+nt}{augment}\PYG{p}{:}
+\PYG{+w}{          }\PYG{n+nt}{type}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{drq}
+\PYG{+w}{          }\PYG{n+nt}{drq}\PYG{p}{:}
+\PYG{+w}{            }\PYG{n+nt}{max\PYGZus{}shift}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{4}
+
+\PYG{+w}{    }\PYG{n+nt}{v2}\PYG{p}{:}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZdl{}extends}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{[}\PYG{n+nv}{baseline}\PYG{p+pIndicator}{]}
+\PYG{+w}{      }\PYG{n+nt}{data.loaders.dreamer\PYGZus{}wm}\PYG{p}{:}
+\PYG{+w}{        }\PYG{n+nt}{augment}\PYG{p}{:}
+\PYG{+w}{          }\PYG{n+nt}{type}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{drq}
+\PYG{+w}{          }\PYG{n+nt}{drq}\PYG{p}{:}
+\PYG{+w}{            }\PYG{n+nt}{max\PYGZus{}shift}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{4}
+\PYG{+w}{  }\PYG{l+lScalar+lScalarPlain}{(...)}
+\end{Verbatim}

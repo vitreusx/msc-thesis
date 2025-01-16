@@ -1,0 +1,3 @@
+[submodule "rsrch"]
+	path = rsrch
+	url = https://github.com/vitreusx/rsrch
